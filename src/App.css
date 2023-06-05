@@ -6,5 +6,46 @@
 
 /* Projects */
 
+.page-title {
+    text-align: center;
+    padding: 20px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1rem;
+    align-self: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.project-card {
+    max-width: 25vw; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+  }
+  
+  .project-title {
+    text-align: center;
+  }
+
+.proj-img {
+    object-fit: cover;
+    max-height: auto;
+    max-width: 50%;
+    margin: auto; 
+    padding: 10px;
+    display: block;
+}
+
 
 /* Contact */
