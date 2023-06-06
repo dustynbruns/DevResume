@@ -3,49 +3,161 @@
 
 /* Home */
 
+/* Home */
+
+.welcome-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.about-text {
+  text-align: justify;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.education-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.certificate-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.certificate-list .certificate-card {
+  width: 200px;
+  margin: 10px;
+}
+
+.navigation-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.projects-button, .contact-button {
+  width: 45%; /* To make the buttons equal width */
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certificate-list {
+    justify-content: center;
+  }
+
+  .navigation-section {
+    flex-direction: column;
+  }
+
+  .projects-button, .contact-button {
+    width: 100%; /* Make the buttons full-width on smaller screens */
+    margin: 5px 0; /* Add some margin to separate the buttons */
+  }
+}
+
 
 /* Projects */
 
 .page-title {
-    text-align: center;
-    padding: 20px;
+  align-items: center;
+  padding: 20px;
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 1rem;
-    align-self: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* At least 2 columns on small screens */
+  gap: 1rem;
+  align-self: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media screen and (min-width: 800px) {
+  .projects-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, calc(25% - 1rem))); /* At most 4 columns on larger screens */
   }
-  
-  @media (max-width: 768px) {
-    .projects-container {
-      grid-template-columns: 1fr;
-    }
-  }
+}
 
 .project-card {
-    max-width: 25vw; 
-    margin: 0 auto; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-  }
-  
-  .project-title {
-    text-align: center;
-  }
+  max-width: 25vw; 
+  margin: 0 auto; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.project-title {
+  text-align: center;
+}
 
 .proj-img {
-    object-fit: cover;
-    max-height: auto;
-    max-width: 50%;
-    margin: auto; 
-    padding: 10px;
-    display: block;
+  object-fit: cover;
+  max-height: auto;
+  max-width: 50%;
+  margin: auto; 
+  padding: 10px;
+  display: block;
 }
 
 
 /* Contact */
+
+
+
+/* Header */
+
+
+
+/* Footer */
+
+
+
+/* Certificate */
+
+/* Certificate */
+
+.certificate-item {
+  cursor: pointer;
+  list-style-type: none;
+  margin-bottom: 1rem;
+  color: #007BFF; /* Same color as Bootstrap's default primary color */
+  text-decoration: underline;
+}
+
+.certificate-modal .modal-content {
+  background-color: #f8f9fa; /* Light gray color for the modal background */
+}
+
+.certificate-modal .modal-header, 
+.certificate-modal .modal-body {
+  padding: 2rem;
+}
+
+.certificate-modal .modal-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.certificate-modal img {
+  width: 100%;
+  height: auto;
+}

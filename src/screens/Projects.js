@@ -47,7 +47,7 @@ function Projects() {
                                         src={`https://raw.githubusercontent.com/${project.owner.login}/${project.name}/master/snapshot.png`}
                                         />
                                     <Card.Body>
-                                        <Card.Title classname='project-title'>{project.name}</Card.Title>
+                                        <Card.Title className='project-title'>{project.name}</Card.Title>
                                     </Card.Body>
                                 </Card>
                             </OverlayTrigger>
