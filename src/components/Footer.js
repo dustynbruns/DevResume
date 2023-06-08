@@ -7,7 +7,7 @@ function Footer() {
             <Container>
                 <Row>
                     <Col className="text-center text-white">
-                        &copy; {new Date().getFullYear()} Your Name
+                        &copy; {new Date().getFullYear()} Dustyn Bruns -- Engineer.
                     </Col>
                 </Row>
             </Container>

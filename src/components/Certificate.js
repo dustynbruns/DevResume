@@ -1,38 +1,25 @@
 import React, { useState } from 'react';
-import { Modal } from 'react-bootstrap';
-import { Document, Page } from 'react-pdf';
+import { Modal, Image } from 'react-bootstrap';
 
-function Certificate({ title, pdfUrl }) {
+function Certificate({ title, imgUrl }) {
     const [showModal, setShowModal] = useState(false);
-    const [numPages, setNumPages] = useState(null);
-
-    const onDocumentLoadSuccess = ({ numPages }) => {
-        setNumPages(numPages);
-    }
 
     const openModal = () => setShowModal(true);
     const closeModal = () => setShowModal(false);
 
     return (
         <>
-            <li className="certificate-item" onClick={openModal}>{title}</li>
+            <div className="certificate-item" onClick={openModal}>
+                <Image src={imgUrl} className='thumbnail' />
+                <p>{title}</p>
+            </div>
 
             <Modal show={showModal} onHide={closeModal} className="certificate-modal">
                 <Modal.Header closeButton>
                     <Modal.Title>{title}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Document
-                        file={pdfUrl}
-                        onLoadSuccess={onDocumentLoadSuccess}
-                    >
-                        {Array.from(new Array(numPages), (el, index) => (
-                            <Page
-                                key={`page_${index + 1}`}
-                                pageNumber={index + 1}
-                            />
-                        ))}
-                    </Document>
+                    <Image src={imgUrl} fluid />
                 </Modal.Body>
             </Modal>
         </>
