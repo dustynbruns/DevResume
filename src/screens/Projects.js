@@ -13,7 +13,7 @@ function Projects() {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get('http://DevResServer.us-west-1.elasticbeanstalk.com/projects');
+                const response = await axios.get('https://d358h034ftk9p8.cloudfront.net/projects');
                 setProjects(response.data);
             } catch (error) {
                 console.error('Failed to fetch projects:', error);
