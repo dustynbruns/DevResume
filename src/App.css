@@ -368,7 +368,8 @@ img {
 
 
 .certificate-modal .modal-content {
-  background-color: #f8f9fa; /* Light gray color for the modal background */
+  background-color: #383f45; /* Light gray color for the modal background */
+  color: white;
 }
 
 .certificate-modal .modal-header, 
