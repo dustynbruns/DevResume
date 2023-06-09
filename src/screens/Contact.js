@@ -11,7 +11,7 @@ function Contact() {
 
     const submitForm = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/contact', { name, email, message })
+        axios.post('http://DevResServer.us-west-1.elasticbeanstalk.com/contact', { name, email, message })
             .then((response) => {
                 setStatus({ message: "Email sent successfully!", type: "success" });
             }, (error) => {
